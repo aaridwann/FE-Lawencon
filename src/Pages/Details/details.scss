@@ -1,0 +1,103 @@
+@import '../Home/home.scss';
+
+
+.details {
+    margin: auto;
+    width: 70%;
+    height: auto;
+    background: hsla(180, 13%, 58%, 1);
+    background: linear-gradient(90deg, hsla(180, 13%, 58%, 1) 0%, hsla(335, 16%, 61%, 1) 100%);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #2f3e46;
+
+    button {
+        display: block;
+        width: 120px;
+        padding: 8px;
+        border-radius: 20px;
+        font-size: large;
+        font-weight: bold;
+        color: white;
+        margin: auto;
+        align-items: center;
+        background-color: $coklatTua;
+        border: none;
+    }
+
+}
+
+.navbar {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img {
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    height: auto;
+
+    h1 {
+        font-size: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        height: 120px;
+        border-bottom: 2px solid #2f3e46;
+    }
+}
+
+.desc {
+    margin-top: -40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+// SectionA
+.A {
+    margin: 40px;
+
+    h4 {
+        font-size: 20px;
+        margin: 2px;
+        font-style: italic;
+        display: flex;
+        width: 160px;
+        flex-wrap: initial;
+    }
+
+    p {
+        font-weight: lighter;
+    }
+}
+
+
+.B {
+    margin: 40px;
+
+    h4 {
+        font-size: 20px;
+        margin: 2px;
+        font-style: italic;
+    }
+}

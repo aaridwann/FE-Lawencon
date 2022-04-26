@@ -1,0 +1,71 @@
+@import '../../Pages/Home/home.scss';
+
+.top {
+    width: 100%;
+    position: sticky;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.64);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+
+    form {
+        display: flex;
+
+        input {
+            border-radius: 20px;
+            border: none;
+            background-color: $coklatTua;
+            padding: 8px;
+            text-align: center;
+        }
+    }
+
+    h3 {
+        margin: 20px;
+        font-size: larger;
+        font-family: $title1;
+        letter-spacing: 15px;
+        font-size: 50px;
+    }
+
+    img {
+        width: 50px;
+        padding: 15px;
+
+        // &:hover {
+        //     background-color: $coklatTua;
+        //     border-radius: 50%;
+
+        // }
+    }
+}
+
+.suggest {
+    margin-top: 15%;
+    right: 140px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        width: 200px;
+        padding: 4px;
+        border-bottom: 2px solid black;
+        height: auto;
+        background-color: white;
+        margin: auto;
+    }
+
+    &:hover, section, p {
+        background-color: $coklatTua;
+    }
+}

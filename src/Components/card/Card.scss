@@ -1,0 +1,60 @@
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-end;
+    justify-content: flex-end;
+    box-shadow: 5px 5px 10px black;
+
+    &:hover {
+        box-shadow: 5px 10px 20px black;
+        background-color: black;
+    }
+
+
+    .contentDetail {
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5657015590200445) 22%, rgba(255, 254, 254, 0) 82%, rgba(255, 255, 255, 0.13363028953229394) 100%);
+        margin-top: 80%;
+        text-align: center;
+
+        h2 {
+            color: white;
+            margin-bottom: -10px;
+        }
+
+        p {
+            color: white;
+        }
+
+    }
+}
+
+.sedet {
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    background-color: black;
+    color: white;
+
+    &:hover {
+        color: black;
+        background-color: white;
+        p{
+
+            color: aqua;
+        }
+    }
+}
