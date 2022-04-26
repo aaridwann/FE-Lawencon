@@ -27,14 +27,18 @@ export default function Home() {
   const [suggest, setSuggest] = useState([])
   let [count, setCount] = useState(0)
   let image = movie.map((x) => x.Poster)
+
+  // Use effect for first fetching
   useEffect(() => {
     fetchingData(url2, apiKey, search, page, setMovie, movie)
   }, [page, search])
 
+  // Use Effect for suggest
   useEffect(() => {
     Suggest(search, movie, setSuggest)
   }, [search])
 
+  // Timeout for Banner Slide
   setTimeout(() => {
     setCount(count += 1)
     if (count > 5) {
@@ -42,22 +46,29 @@ export default function Home() {
     }
   }, 3000)
 
+  // On Scroll Command for refresh page
   window.onscroll = () => {
     if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
       console.log('scroll');;
       setPage(page + 1)
     }
   }
+
   return (
 
     <div className='cthome'>
+
+
+      {/* Reusable navbar Component with many Props command*/}
       <Navbar click={(e) => {
         navigate(`/details/${e}`)
         setSearch('')
-      }
-      }
-        suggest={suggest} change={(e) => setSearch(e.target.value)} />
+      }}
+        suggest={suggest}
+        change={(e) => setSearch(e)}
+      />
 
+      {/* Banner hero */}
       <section className='headhome' style={{ backgroundImage: `url(${image[count]})` }}>
         <div className='title'>
           <h2>Title</h2>
@@ -70,21 +81,22 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* Content Section List movie */}
       <div className='content'>
         {movie.map((x, i) => (
+          // card component reusable component for movie list
           <Card
             click={(x) => navigate(`/details/${x}`)}
             key={i}
             modal={(e) => {
               setDataModal(e)
               setModal(!modal)
-              console.log(dataModal)
             }}
             data={x} />
         ))}
       </div>
 
+      {/* Modal display on triggered by modal state*/}
       {modal && <Modals close={() => setModal(false)} data={dataModal} />}
 
     </div>
